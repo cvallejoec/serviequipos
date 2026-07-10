@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    // La transpilación de los tests corre con SWC (ver `test/jest.preset.js`);
+    // este tsconfig existe solo para el type-check del editor sobre `test/`.
+    // `allowJs` cubre el ESM de `@faker-js/faker` v10 y `rootDir: ..` porque
+    // los tests importan desde `../src`. No emite.
+    "allowJs": true,
+    "rootDir": "..",
+    "noEmit": true
+  },
+  "include": ["**/*", "../src/**/*"]
+}

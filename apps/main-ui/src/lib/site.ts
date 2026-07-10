@@ -1,0 +1,15 @@
+export const SITE = {
+  name: "serviequipos",
+  domain: "serviequipos.com",
+  url: "https://serviequipos.com",
+  locale: "es_EC",
+  htmlLang: "es-EC",
+  description: "serviequipos",
+  tagline: "serviequipos",
+  email: "hola@serviequipos.com",
+  themeColor: "#c2603d",
+  backgroundColor: "#f5edd8",
+  ogImage: "/images/og-image.png",
+  twitterImage: "/images/twitter-image.png",
+  logoIcon: "/images/icon-512.png",
+} as const;

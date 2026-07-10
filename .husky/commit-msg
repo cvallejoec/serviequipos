@@ -1,0 +1,19 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE="$1"
+
+# Quitar prefijo existente para recalcularlo (soporta --amend)
+ORIGINAL=$(sed 's/^\[[a-zA-Z0-9, _-]*\] //' "$COMMIT_MSG_FILE")
+
+# Detectar apps con cambios en staging (lee de apps/<nombre>/...)
+APPS=$(git diff --cached --name-only 2>/dev/null \
+  | grep '^apps/' \
+  | cut -d'/' -f2 \
+  | sort -u \
+  | awk 'NR==1{printf "%s",$0} NR>1{printf ", %s",$0} END{print ""}')
+
+if [ -n "$APPS" ]; then
+  printf '[%s] %s' "$APPS" "$ORIGINAL" > "$COMMIT_MSG_FILE"
+else
+  printf '%s' "$ORIGINAL" > "$COMMIT_MSG_FILE"
+fi

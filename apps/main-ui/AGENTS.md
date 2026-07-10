@@ -1,0 +1,6 @@
+- El layout completo de toda la aplicación tiene dos modos de verse. Mobile y Desktop. No es responsive, sino que se muestra una versión u otra dependiendo del tamaño de la pantalla. Esto se hace para optimizar la experiencia en cada tipo de dispositivo.
+- En cada modo, se muestran diferentes componentes y se organizan de manera distinta para aprovechar el espacio disponible. Por ejemplo, en mobile se prioriza la navegación y el acceso rápido a las funciones principales, mientras que en desktop se pueden mostrar más detalles y opciones al mismo tiempo.
+- Para mobile debes pensar como si fuera una app nativa, con pantallas independientes y navegación entre ellas. Para desktop, puedes aprovechar el espacio para mostrar varias secciones a la vez, como un panel lateral de navegación, un área principal de contenido y una barra superior con opciones adicionales.
+- Todos los features y funcionalidades de la aplicación deben estar disponibles en ambos modos, pero adaptados a las necesidades y limitaciones de cada uno. Esto requiere un diseño cuidadoso y una implementación que tenga en cuenta las diferencias entre mobile y desktop.
+- Rutas (o carpetas) deben ser en inglés
+- Cuida de usar tecnisismos y lenguaje técnico en los copys
